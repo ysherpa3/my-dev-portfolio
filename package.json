@@ -1,0 +1,40 @@
+{
+  "name": "my-dev-portfolio",
+  "version": "1.0.0",
+  "description": "Web development portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preload-fonts": "gatsby-preload-fonts"
+  },
+  "author": "Yogesh Sherpa",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.50",
+    "@material-ui/styles": "^4.9.10",
+    "axios": "^0.19.2",
+    "formik": "^2.1.4",
+    "formik-material-ui": "^2.0.0-beta.1",
+    "gatsby": "^2.20.24",
+    "gatsby-image": "^2.3.4",
+    "gatsby-plugin-anchor-links": "^1.1.1",
+    "gatsby-plugin-brotli": "^1.3.1",
+    "gatsby-plugin-manifest": "^2.3.5",
+    "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-netlify": "^2.2.3",
+    "gatsby-plugin-offline": "^3.1.4",
+    "gatsby-plugin-preload-fonts": "^1.1.3",
+    "gatsby-plugin-react-helmet-async": "^1.0.16",
+    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-source-graphql": "^2.4.2",
+    "gatsby-transformer-sharp": "^2.4.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet-async": "^1.0.5",
+    "react-icons": "^3.9.0",
+    "yup": "^0.28.3"
+  }
+}
