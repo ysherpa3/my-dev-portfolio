@@ -9,7 +9,7 @@ module.exports = {
     author: `Yogesh Sherpa`,
     defaultDescription: `Web development portfolio`,
     defaultTitle: `Portfolio`,
-    image: `logos/logo.png`,
+    image: `/src/images/logo.png`,
     siteLanguage: `en-US`,
     siteUrl: `http://localhost:8000/`,
     githubUrl: `https://github.com/ysherpa3`,
