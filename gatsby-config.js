@@ -50,28 +50,6 @@ module.exports = {
         theme_color: `#00acc1`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
-        icons: [
-          {
-            src: `/images/logo-120x120.png`,
-            sizes: `120x120`,
-            type: `image/png`,
-          },
-          {
-            src: `/images/logo-128x128.png`,
-            sizes: `128x128`,
-            type: `image/png`,
-          },
-          {
-            src: `/images/logo-152x152.png`,
-            sizes: `152x152`,
-            type: `image/png`,
-          },
-          {
-            src: `/images/logo-180x180.png`,
-            sizes: `180x180`,
-            type: `image/png`,
-          },
-        ],
       },
     },
     {
