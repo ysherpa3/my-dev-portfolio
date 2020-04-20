@@ -11,7 +11,7 @@ module.exports = {
     defaultTitle: `Portfolio`,
     image: `/src/images/logo.png`,
     siteLanguage: `en-US`,
-    siteUrl: `http://localhost:8000/`,
+    siteUrl: `https://ys-dev-portfolio.netlify.app/`,
     githubUrl: `https://github.com/ysherpa3`,
     linkedinUrl: `https://www.linkedin.com/in/ysherpa`,
   },
@@ -44,7 +44,7 @@ module.exports = {
       options: {
         name: `Web Dev Portfolio`,
         short_name: `Portfolio`,
-        description: `Web development portfolio`,
+        description: `Web development portfolio website`,
         start_url: `/`,
         background_color: `#fafafa`,
         theme_color: `#00acc1`,
