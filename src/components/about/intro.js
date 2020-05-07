@@ -10,7 +10,7 @@ const Intro = () => {
   return (
     <>
       <Typography color="textPrimary" paragraph variant="body1">
-        Welcome! My name is Yogesh Sherpa. I am freelance web developer, based
+        Welcome! My name is Yogesh Sherpa. I am a freelance web developer, based
         in Vienna, VA.
       </Typography>
       <Typography color="textPrimary" paragraph variant="body1">
