@@ -81,7 +81,6 @@ const ContactForm = () => {
             label="Name"
             margin="normal"
             name="name"
-            required
             type="text"
           />
           <Field
@@ -92,7 +91,6 @@ const ContactForm = () => {
             label="Email"
             margin="normal"
             name="email"
-            required
             type="email"
           />
           <Field
@@ -104,7 +102,6 @@ const ContactForm = () => {
             margin="normal"
             multiline
             name="message"
-            required
             rows={4}
             type="text"
           />
