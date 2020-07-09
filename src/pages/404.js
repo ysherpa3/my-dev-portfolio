@@ -1,9 +1,9 @@
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link as GatsbyLink } from "gatsby";
 import React from "react";
 import { FaRegSadCry } from "react-icons/fa";
 import Layout from "../components/common/layout";
+import Link from "../components/common/link";
 
 /**
  * 404 Page not found
@@ -24,6 +24,14 @@ const useStyles = makeStyles({
   // Styles applied to grid
   grid: {
     textAlign: "center",
+  },
+  // Styles applied to button
+  button: {
+    backgroundColor: "#00acc1",
+
+    "&:hover": {
+      backgroundColor: "#ffc400",
+    },
   },
 });
 
@@ -56,13 +64,11 @@ const PageNotFound = () => {
           <Typography paragraph variant="h4">
             Oops! The page you are looking for doesn't exist.
           </Typography>
-          <GatsbyLink
-            aria-label="go to homepage"
-            className={classes.link}
-            to="/"
-          >
-            <Button variant="contained">back to homepage</Button>
-          </GatsbyLink>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Button variant="contained" className={classes.button}>
+              back to homepage
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     </Layout>

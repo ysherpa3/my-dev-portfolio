@@ -50,7 +50,6 @@ const ProjectsSection = () => {
                   }
                 }
               }
-              url
             }
           }
         }
@@ -70,7 +69,6 @@ const ProjectsSection = () => {
               <ProjectCard
                 demoUrl={repo.homepageUrl}
                 description={repo.description}
-                githubUrl={repo.url}
                 language={repo.languages.nodes.map((language) => (
                   <Chip
                     className={classes.chip}

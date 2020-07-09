@@ -18,18 +18,11 @@ const useStyles = makeStyles({
     flexDirection: "column",
     height: "100%",
     justifyContent: "center",
-    maxWidth: "20rem",
+    maxWidth: 345,
   },
 });
 
-const ProjectCard = ({
-  demoUrl,
-  description,
-  githubUrl,
-  language,
-  name,
-  topics,
-}) => {
+const ProjectCard = ({ demoUrl, description, language, name, topics }) => {
   const classes = useStyles();
 
   return (
@@ -40,7 +33,7 @@ const ProjectCard = ({
         name={name}
         topics={topics}
       />
-      <ProjectCardActions demoUrl={demoUrl} githubUrl={githubUrl} />
+      <ProjectCardActions demoUrl={demoUrl} />
     </Card>
   );
 };

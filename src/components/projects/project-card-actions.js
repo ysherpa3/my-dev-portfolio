@@ -1,13 +1,12 @@
 import { Button, CardActions } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import GitHubIcon from "@material-ui/icons/GitHub";
 import WebIcon from "@material-ui/icons/Web";
 import React from "react";
+import Link from "../common/link";
 
 /**
  * Projects section - Project card actions
  * Contents:
- *  - link to source code in github
  *  - link to demo page in netlify (if available)
  */
 
@@ -20,33 +19,21 @@ const useStyles = makeStyles({
   },
 });
 
-const ProjectCardActions = ({ demoUrl, githubUrl }) => {
+const ProjectCardActions = ({ demoUrl }) => {
   const classes = useStyles();
 
   return (
     <CardActions className={classes.cardActions}>
-      <Button
-        href={githubUrl}
-        rel="noopener noreferrer"
-        size="small"
-        startIcon={<GitHubIcon style={{ color: "#333" }} />}
-        target="_blank"
-        variant="contained"
-      >
-        code
-      </Button>
-
       {demoUrl ? (
-        <Button
-          href={demoUrl}
-          rel="noopener noreferrer"
-          size="small"
-          startIcon={<WebIcon style={{ color: "#069" }} />}
-          target="_blank"
-          variant="contained"
-        >
-          demo
-        </Button>
+        <Link to={demoUrl} underline="none">
+          <Button
+            size="small"
+            startIcon={<WebIcon style={{ color: "#069" }} />}
+            variant="contained"
+          >
+            Go to site
+          </Button>
+        </Link>
       ) : (
         ""
       )}
