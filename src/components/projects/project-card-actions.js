@@ -24,7 +24,7 @@ const ProjectCardActions = ({ demoUrl }) => {
 
   return (
     <CardActions className={classes.cardActions}>
-      {demoUrl && demoUrl !== "https://ys-dev-portfolio.netlify.app" ? (
+      {demoUrl && demoUrl !== "https://ys-dev-portfolio.netlify.app/" ? (
         <Link to={demoUrl} underline="none">
           <Button
             size="small"
