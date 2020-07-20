@@ -65,12 +65,6 @@ const SEO = ({ pathname }) => {
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
 
-      <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap"
-        media="screen"
-        rel="stylesheet"
-      />
-
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgWebSite)}
       </script>
