@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    minHeight: "70vh",
+    minHeight: "80vh",
     padding: "3rem 0",
   },
 });

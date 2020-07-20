@@ -35,7 +35,7 @@ const MyPhoto = () => {
   `);
 
   return (
-    <Paper className={classes.paper} elevation={5} square>
+    <Paper className={classes.paper} elevation={6} square>
       <Img
         alt="photo of yogesh sherpa"
         fluid={data.file.childImageSharp.fluid}

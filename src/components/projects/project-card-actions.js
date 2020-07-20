@@ -24,19 +24,15 @@ const ProjectCardActions = ({ demoUrl }) => {
 
   return (
     <CardActions className={classes.cardActions}>
-      {demoUrl && demoUrl !== "https://ys-dev-portfolio.netlify.app/" ? (
-        <Link to={demoUrl} underline="none">
-          <Button
-            size="small"
-            startIcon={<WebIcon style={{ color: "#069" }} />}
-            variant="contained"
-          >
-            Go to site
-          </Button>
-        </Link>
-      ) : (
-        ""
-      )}
+      <Link to={demoUrl} underline="none">
+        <Button
+          size="small"
+          startIcon={<WebIcon style={{ color: "#069" }} />}
+          variant="contained"
+        >
+          Go to site
+        </Button>
+      </Link>
     </CardActions>
   );
 };

@@ -42,11 +42,6 @@ const CustomTheme = createMuiTheme({
         },
       },
     },
-    MuiCard: {
-      root: {
-        backgroundColor: cyan[50],
-      },
-    },
     MuiFormLabel: {
       asterisk: {
         color: amber[900],
@@ -59,18 +54,19 @@ const CustomTheme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "'Cabin', sans-serif",
     h1: {
       fontFamily: "'Roboto Condensed', sans-serif",
       textTransform: "capitalize",
+      fontWeight: 400,
     },
     h6: {
       fontFamily: "'Roboto Condensed', sans-serif",
-      textTransform: "capitalize",
+      fontWeight: 700,
     },
     subtitle2: {
       fontFamily: "'Roboto Condensed', sans-serif",
-      textTransform: "capitalize",
+      letterSpacing: "0.05rem",
     },
   },
 });

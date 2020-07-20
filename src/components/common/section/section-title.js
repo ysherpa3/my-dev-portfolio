@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import MuiTheme from "../mui-theme";
+import theme from "../mui-theme";
 
 /**
  * Section title component
@@ -10,8 +10,8 @@ import MuiTheme from "../mui-theme";
 const useStyles = makeStyles({
   // Styles applied to the title
   title: {
-    color: MuiTheme.palette.primary.dark,
-    paddingBottom: "3rem",
+    color: theme.palette.primary.dark,
+    paddingBottom: theme.spacing(2),
   },
 });
 

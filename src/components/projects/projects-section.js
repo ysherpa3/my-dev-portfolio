@@ -62,44 +62,42 @@ const ProjectsSection = () => {
   return (
     <SectionContentWrapper
       alignItems="stretch"
-      content={
-        <>
-          {repos.map((repo) => (
-            <Grid item key={repo.id}>
-              <ProjectCard
-                demoUrl={repo.homepageUrl}
-                description={repo.description}
-                language={repo.languages.nodes.map((language) => (
-                  <Chip
-                    className={classes.chip}
-                    color="default"
-                    icon={
-                      <FiberManualRecordIcon
-                        style={{ color: language.color }}
-                      />
-                    }
-                    key={language.id}
-                    label={language.name}
-                    size="small"
-                    variant="outlined"
-                  />
-                ))}
-                name={repo.name}
-                topics={repo.repositoryTopics.nodes.map((node) => (
-                  <Chip
-                    className={classes.chip}
-                    color="default"
-                    key={node.topic.id}
-                    label={node.topic.name}
-                    size="small"
-                    variant="outlined"
-                  />
-                ))}
-              />
-            </Grid>
-          ))}
-        </>
-      }
+      content={repos.map((repo) => (
+        <Grid item key={repo.id}>
+          {repo.homepageUrl !== "https://ys-dev-portfolio.netlify.app/" ? (
+            <ProjectCard
+              demoUrl={repo.homepageUrl}
+              description={repo.description}
+              language={repo.languages.nodes.map((language) => (
+                <Chip
+                  className={classes.chip}
+                  color="default"
+                  icon={
+                    <FiberManualRecordIcon style={{ color: language.color }} />
+                  }
+                  key={language.id}
+                  label={language.name}
+                  size="small"
+                  variant="outlined"
+                />
+              ))}
+              name={repo.name}
+              topics={repo.repositoryTopics.nodes.map((node) => (
+                <Chip
+                  className={classes.chip}
+                  color="default"
+                  key={node.topic.id}
+                  label={node.topic.name}
+                  size="small"
+                  variant="outlined"
+                />
+              ))}
+            />
+          ) : (
+            ""
+          )}
+        </Grid>
+      ))}
       id="projects"
       spacing={2}
       title="projects"

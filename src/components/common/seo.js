@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 /**
  * SEO component
@@ -14,10 +14,10 @@ const SEO = ({ pathname }) => {
     siteMetadata: {
       author,
       defaultDescription,
-      defaultTitle,
       image,
       siteLanguage,
       siteUrl,
+      title,
     },
   } = site;
 
@@ -25,7 +25,7 @@ const SEO = ({ pathname }) => {
     description: defaultDescription,
     image: image,
     language: siteLanguage,
-    title: defaultTitle,
+    title: title,
     url: `${siteUrl}${pathname || ""}`,
   };
 
@@ -53,7 +53,7 @@ const SEO = ({ pathname }) => {
   };
 
   return (
-    <Helmet>
+    <Helmet title={seo.title}>
       <title>{seo.title}</title>
       <html lang={seo.language} />
       <meta name="description" content={seo.description} />
@@ -93,10 +93,10 @@ export const query = graphql`
       siteMetadata {
         author
         defaultDescription
-        defaultTitle
         image
         siteLanguage
         siteUrl
+        title
       }
     }
   }

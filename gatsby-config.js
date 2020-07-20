@@ -8,12 +8,10 @@ module.exports = {
   siteMetadata: {
     author: `Yogesh Sherpa`,
     defaultDescription: `Web development portfolio`,
-    defaultTitle: `Portfolio`,
     image: `/src/images/logo.png`,
     siteLanguage: `en-US`,
     siteUrl: `https://ys-dev-portfolio.netlify.app/`,
-    githubUrl: `https://github.com/ysherpa3`,
-    linkedinUrl: `https://www.linkedin.com/in/ysherpa`,
+    title: `Yogesh Sherpa Portfolio`,
   },
   plugins: [
     {
@@ -38,11 +36,11 @@ module.exports = {
         defaultQuality: 85,
       },
     },
-    { resolve: `gatsby-transformer-sharp` },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Web Dev Portfolio`,
+        name: `Yogesh Sherpa Web Development Portfolio`,
         short_name: `Portfolio`,
         description: `Web development portfolio website`,
         start_url: `/`,
@@ -52,26 +50,12 @@ module.exports = {
         icon: `src/images/logo.png`,
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-material-ui`,
     {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        workboxConfig: {
-          globPatterns: [`**/*`],
-        },
-      },
-    },
-    { resolve: `gatsby-plugin-netlify` },
-    { resolve: `gatsby-plugin-react-helmet-async` },
-    { resolve: `gatsby-plugin-material-ui` },
-    {
-      resolve: `gatsby-plugin-preload-fonts`,
-      options: {
-        crossOrigin: (pathname) =>
-          pathname.match(/^\/elevated/) ? `use-credentials` : `anonymous`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-anchor-links",
+      resolve: `gatsby-plugin-anchor-links`,
       options: {
         offset: -100,
       },
@@ -85,12 +69,6 @@ module.exports = {
           Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         },
         url: `https://api.github.com/graphql`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-brotli",
-      options: {
-        extensions: ["css", "html", "js", "svg"],
       },
     },
   ],

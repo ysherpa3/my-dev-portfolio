@@ -5,7 +5,7 @@ import {
   ThemeProvider,
 } from "@material-ui/core/styles";
 import React from "react";
-import TopAppBar from "./appbar/app-bar";
+import MenuDrawer from "./appbar/drawer";
 import Footer from "./footer/footer";
 import MuiTheme from "./mui-theme";
 import SEO from "./seo";
@@ -13,7 +13,7 @@ import SEO from "./seo";
 /**
  * Basic page layout
  * Contents:
- *  - app bar
+ *  - drawer
  *  - about section
  *  - projects section
  *  - contact section
@@ -31,6 +31,9 @@ const useStyles = makeStyles({
     },
     a: {
       textDecoration: "none",
+    },
+    ".error": {
+      color: MuiTheme.palette.error.main,
     },
   },
   // Styles applied to root
@@ -70,7 +73,7 @@ const Layout = ({ children }) => {
         <SEO />
         <CssBaseline />
         <Container component="nav" maxWidth="xl">
-          <TopAppBar />
+          <MenuDrawer />
         </Container>
         <Container className={classes.main} component="main" maxWidth="lg">
           {children}
