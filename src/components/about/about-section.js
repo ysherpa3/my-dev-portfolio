@@ -28,7 +28,6 @@ const AboutSection = () => {
       id="about"
       justify="center"
       spacing={4}
-      title="about"
     />
   );
 };

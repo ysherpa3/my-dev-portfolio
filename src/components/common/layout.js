@@ -72,9 +72,9 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={responsiveFontSizes(MuiTheme)}>
         <SEO />
         <CssBaseline />
-        <Container component="nav" maxWidth="xl">
+        <nav>
           <MenuDrawer />
-        </Container>
+        </nav>
         <Container className={classes.main} component="main" maxWidth="lg">
           {children}
         </Container>
