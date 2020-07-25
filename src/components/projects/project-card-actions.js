@@ -30,7 +30,7 @@ const ProjectCardActions = ({ demoUrl }) => {
           startIcon={<WebIcon style={{ color: "#069" }} />}
           variant="contained"
         >
-          Go to site
+          View site
         </Button>
       </Link>
     </CardActions>
