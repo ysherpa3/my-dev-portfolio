@@ -15,6 +15,9 @@ const useStyles = makeStyles({
   // Styles applied to card content
   cardContent: {
     flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
   },
   // Styles applied to languages and topics tags
   tags: {
