@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
 
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       flexDirection: "row",
     },
   },
@@ -126,7 +126,7 @@ export default function SwipeableTemporaryDrawer() {
               </AnchorLink>
             </Box>
           </Box>
-          <Box width="33.3%">
+          <Box width="33.4%">
             <Typography align="center">Yogesh Sherpa</Typography>
           </Box>
           <Box width="33.3%" display="flex" justifyContent="flex-end">
