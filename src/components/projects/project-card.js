@@ -1,4 +1,4 @@
-import { Card } from "@material-ui/core";
+import { Box, Card, useMediaQuery } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import ProjectCardActions from "./project-card-actions";
@@ -13,14 +13,18 @@ import theme from "../common/mui-theme";
  */
 
 const useStyles = makeStyles({
-  // Styles applied to card
+  box: {},
   card: {
     width: "100%",
     height: "100%",
     maxWidth: "18rem",
-    margin: theme.spacing(1, 0),
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
 
     [theme.breakpoints.up("md")]: {
+      flex: "0 50%",
       margin: theme.spacing(1),
     },
   },
@@ -28,17 +32,20 @@ const useStyles = makeStyles({
 
 const ProjectCard = ({ demoUrl, description, language, name, topics }) => {
   const classes = useStyles();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <Card className={classes.card}>
-      <ProjectCardContent
-        description={description}
-        language={language}
-        name={name}
-        topics={topics}
-      />
-      <ProjectCardActions demoUrl={demoUrl} />
-    </Card>
+    <Box height={isDesktop ? 450 : "100%"} my={1}>
+      <Card className={classes.card}>
+        <ProjectCardContent
+          description={description}
+          language={language}
+          name={name}
+          topics={topics}
+        />
+        <ProjectCardActions demoUrl={demoUrl} />
+      </Card>
+    </Box>
   );
 };
 

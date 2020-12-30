@@ -12,7 +12,6 @@ import React from "react";
  */
 
 const useStyles = makeStyles({
-  // Styles applied to languages and topics tags
   tags: {
     padding: "1rem 0",
   },
@@ -23,7 +22,7 @@ const ProjectCardContent = ({ name, description, language, topics }) => {
 
   return (
     <CardContent>
-      <Typography variant="subtitle1" gutterBottom>
+      <Typography variant="subtitle1" align="center" gutterBottom>
         <i>{name}</i>
       </Typography>
       <Typography variant="body2" gutterBottom>

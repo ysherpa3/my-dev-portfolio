@@ -31,6 +31,7 @@ const SectionWrapper = ({ content, id, title }) => {
         flexDirection={isMobile ? "column" : "row"}
         justifyContent="center"
         alignItems="center"
+        flexWrap="wrap"
       >
         {content}
       </Box>
