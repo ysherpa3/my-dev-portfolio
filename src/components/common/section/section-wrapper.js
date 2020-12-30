@@ -29,7 +29,7 @@ const SectionWrapper = ({ alignItems, content, id, spacing, title }) => {
         <Grid
           alignItems={alignItems}
           container
-          justify="center"
+          justify="space-evenly"
           spacing={spacing}
         >
           {content}
