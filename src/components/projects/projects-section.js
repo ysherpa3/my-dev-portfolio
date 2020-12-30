@@ -64,7 +64,7 @@ const ProjectsSection = () => {
       alignItems="stretch"
       content={repos.map((repo) => (
         <Grid item key={repo.id}>
-          {repo.homepageUrl !== "https://ys-dev-portfolio.netlify.app/" ? (
+          {repo.homepageUrl !== "https://yogeshsherpa.com/" ? (
             <ProjectCard
               demoUrl={repo.homepageUrl}
               description={repo.description}
