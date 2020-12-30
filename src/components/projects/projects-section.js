@@ -61,7 +61,7 @@ const ProjectsSection = () => {
 
   return (
     <SectionContentWrapper
-      alignItems="stretch"
+      alignItems="center"
       content={repos.map((repo) => (
         <Grid item key={repo.id}>
           {repo.homepageUrl !== "https://yogeshsherpa.com/" ? (
