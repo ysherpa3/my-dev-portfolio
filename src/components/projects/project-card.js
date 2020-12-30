@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import ProjectCardActions from "./project-card-actions";
 import ProjectCardContent from "./project-card-content";
+import theme from "../common/mui-theme";
 
 /**
  * Projects section - Project card component
@@ -14,11 +15,14 @@ import ProjectCardContent from "./project-card-content";
 const useStyles = makeStyles({
   // Styles applied to card
   card: {
-    display: "flex",
-    flexDirection: "column",
+    width: "100%",
     height: "100%",
-    justifyContent: "space-between",
-    maxWidth: 345,
+    maxWidth: "18rem",
+    margin: theme.spacing(1, 0),
+
+    [theme.breakpoints.up("md")]: {
+      margin: theme.spacing(1),
+    },
   },
 });
 
@@ -26,7 +30,7 @@ const ProjectCard = ({ demoUrl, description, language, name, topics }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.card} square>
+    <Card className={classes.card}>
       <ProjectCardContent
         description={description}
         language={language}

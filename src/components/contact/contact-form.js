@@ -28,6 +28,9 @@ const useStyles = makeStyles({
     textAlign: "left",
     margin: theme.spacing(0.5, 0),
   },
+  form: {
+    padding: theme.spacing(0, 1),
+  },
 });
 
 // Yup validation schema
@@ -47,7 +50,7 @@ const ContactForm = () => {
   const encode = (data) => {
     return Object.keys(data)
       .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
       )
       .join("&");
   };

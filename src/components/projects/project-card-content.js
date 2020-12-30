@@ -1,4 +1,4 @@
-import { CardContent, Divider, Grid, Typography } from "@material-ui/core";
+import { Box, CardContent, Divider, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 
@@ -12,13 +12,6 @@ import React from "react";
  */
 
 const useStyles = makeStyles({
-  // Styles applied to card content
-  cardContent: {
-    flexGrow: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between'
-  },
   // Styles applied to languages and topics tags
   tags: {
     padding: "1rem 0",
@@ -29,7 +22,7 @@ const ProjectCardContent = ({ name, description, language, topics }) => {
   const classes = useStyles();
 
   return (
-    <CardContent className={classes.cardContent}>
+    <CardContent>
       <Typography variant="subtitle1" gutterBottom>
         <i>{name}</i>
       </Typography>
@@ -37,23 +30,15 @@ const ProjectCardContent = ({ name, description, language, topics }) => {
         {description}
       </Typography>
       <Divider />
-      <Grid container alignItems="center" className={classes.tags}>
-        <Grid item xs={4}>
-          <Typography variant="subtitle2">Languages: </Typography>
-        </Grid>
-        <Grid item xs={8}>
-          {language}
-        </Grid>
-      </Grid>
+      <Box className={classes.tags}>
+        <Typography>Languages:</Typography>
+        <Box>{language}</Box>
+      </Box>
       <Divider />
-      <Grid container alignItems="center" className={classes.tags}>
-        <Grid item xs={4}>
-          <Typography variant="subtitle2">Topics: </Typography>
-        </Grid>
-        <Grid item xs={8}>
-          {topics}
-        </Grid>
-      </Grid>
+      <Box className={classes.tags}>
+        <Typography>Topics:</Typography>
+        <Box>{topics}</Box>
+      </Box>
       <Divider />
     </CardContent>
   );

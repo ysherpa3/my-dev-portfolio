@@ -1,6 +1,7 @@
-import { Link, Typography } from "@material-ui/core";
+import { Box, Link, Typography } from "@material-ui/core";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import React from "react";
+import theme from "../common/mui-theme";
 
 /**
  * About section - Introduction
@@ -8,12 +9,12 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <>
-      <Typography color="textPrimary" paragraph variant="body1">
+    <Box display="flex" flexDirection="column" p={theme.spacing(0.25)}>
+      <Typography color="textPrimary" paragraph>
         Welcome to my portfolio! My name is Yogesh Sherpa. I am a freelance web
         developer based in Vienna, VA.
       </Typography>
-      <Typography color="textPrimary" paragraph variant="body1">
+      <Typography color="textPrimary" paragraph>
         My skills include creating fast, responsive websites using front-end
         frameworks such as{" "}
         <Link
@@ -41,7 +42,7 @@ const Intro = () => {
         </Link>
         .
       </Typography>
-      <Typography color="textPrimary" paragraph variant="body1">
+      <Typography color="textPrimary" paragraph>
         Check out some of my{" "}
         <AnchorLink stripHash to="/#projects">
           <Typography
@@ -54,7 +55,7 @@ const Intro = () => {
         </AnchorLink>{" "}
         below!
       </Typography>
-    </>
+    </Box>
   );
 };
 

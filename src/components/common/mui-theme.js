@@ -1,7 +1,7 @@
 import { amber, cyan, grey, pink, teal } from "@material-ui/core/colors";
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 
-const CustomTheme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     primary: {
       main: cyan[600],
@@ -71,4 +71,6 @@ const CustomTheme = createMuiTheme({
   },
 });
 
-export default CustomTheme;
+theme = responsiveFontSizes(theme);
+
+export default theme;

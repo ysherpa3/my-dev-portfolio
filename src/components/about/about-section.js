@@ -1,5 +1,6 @@
-import { Grid } from "@material-ui/core";
+import { Box, useMediaQuery } from "@material-ui/core";
 import React from "react";
+import theme from "../common/mui-theme";
 import SectionContentWrapper from "../common/section/section-wrapper";
 import MyIntro from "./intro";
 import MyPhoto from "./photo";
@@ -12,22 +13,23 @@ import MyPhoto from "./photo";
  */
 
 const AboutSection = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <SectionContentWrapper
-      alignItems="center"
       content={
-        <>
-          <Grid item md={4} xs={8}>
-            <MyPhoto />
-          </Grid>
-          <Grid item md={8} xs={12}>
-            <MyIntro />
-          </Grid>
-        </>
+        <Box
+          display="flex"
+          flexDirection={isMobile ? "column" : "row"}
+          justifyContent="center"
+          alignItems="center"
+        >
+          <MyPhoto />
+          <MyIntro />
+        </Box>
       }
       id="about"
-      justify="center"
-      spacing={4}
+      title="About"
     />
   );
 };

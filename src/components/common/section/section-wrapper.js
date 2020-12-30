@@ -1,6 +1,7 @@
-import { Container, Grid } from "@material-ui/core";
+import { Box, useMediaQuery } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
+import theme from "../mui-theme";
 import SectionTitle from "./section-title";
 
 /**
@@ -15,27 +16,25 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "center",
     minHeight: "80vh",
-    padding: "2rem 0",
   },
 });
 
-const SectionWrapper = ({ alignItems, content, id, spacing, title }) => {
+const SectionWrapper = ({ content, id, title }) => {
   const classes = useStyles();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <section className={classes.section} id={id}>
+    <Box component="section" className={classes.section} id={id}>
       <SectionTitle title={title} />
-      <Container>
-        <Grid
-          alignItems={alignItems}
-          container
-          justify="space-evenly"
-          spacing={spacing}
-        >
-          {content}
-        </Grid>
-      </Container>
-    </section>
+      <Box
+        display="flex"
+        flexDirection={isMobile ? "column" : "row"}
+        justifyContent="center"
+        alignItems="center"
+      >
+        {content}
+      </Box>
+    </Box>
   );
 };
 

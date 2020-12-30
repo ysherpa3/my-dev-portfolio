@@ -11,9 +11,9 @@ import React from "react";
 const useStyles = makeStyles({
   // Styles applied to the paper component
   paper: {
-    margin: "auto",
-    maxWidth: "18rem",
-    padding: "0.25rem",
+    width: "100%",
+    maxWidth: "15rem",
+    padding: "0.5rem",
   },
 });
 
@@ -35,7 +35,7 @@ const MyPhoto = () => {
   `);
 
   return (
-    <Paper className={classes.paper} elevation={6} square>
+    <Paper className={classes.paper} elevation={1} square>
       <Img
         alt="photo of yogesh sherpa"
         fluid={data.file.childImageSharp.fluid}

@@ -1,13 +1,9 @@
-import { Container, CssBaseline } from "@material-ui/core";
-import {
-  makeStyles,
-  responsiveFontSizes,
-  ThemeProvider,
-} from "@material-ui/core/styles";
+import { Box, CssBaseline } from "@material-ui/core";
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import React from "react";
 import MenuDrawer from "./appbar/drawer";
 import Footer from "./footer/footer";
-import MuiTheme from "./mui-theme";
+import theme from "./mui-theme";
 import SEO from "./seo";
 
 /**
@@ -26,14 +22,12 @@ const useStyles = makeStyles({
     body: {
       backgroundColor: "#fafafa",
       color: "#212121",
-      height: "100%",
-      width: "100%",
     },
     a: {
       textDecoration: "none",
     },
     ".error": {
-      color: MuiTheme.palette.error.main,
+      color: theme.palette.error.main,
     },
   },
   // Styles applied to root
@@ -44,22 +38,18 @@ const useStyles = makeStyles({
     minHeight: "100vh",
   },
   // Styles applied to the header
-  header: {
+  nav: {
     flexShrink: 0,
   },
   // Styles applied to the main element
   main: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "column",
     flexGrow: 1,
-    justifyContent: "center",
   },
   // Styles applied to the footer
   footer: {
-    backgroundColor: MuiTheme.palette.primary.main,
+    backgroundColor: theme.palette.primary.main,
     flexShrink: 0,
-    padding: MuiTheme.spacing(4, 0),
+    padding: theme.spacing(4, 0),
     width: "100%",
   },
 });
@@ -69,18 +59,18 @@ const Layout = ({ children }) => {
 
   return (
     <div className={classes.root} id="home">
-      <ThemeProvider theme={responsiveFontSizes(MuiTheme)}>
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
         <SEO />
-        <CssBaseline />
-        <nav>
+        <Box component="nav" className={classes.nav}>
           <MenuDrawer />
-        </nav>
-        <Container className={classes.main} component="main" maxWidth="lg">
+        </Box>
+        <Box className={classes.main} component="main">
           {children}
-        </Container>
-        <footer className={classes.footer}>
+        </Box>
+        <Box component="footer" className={classes.footer}>
           <Footer />
-        </footer>
+        </Box>
       </ThemeProvider>
     </div>
   );

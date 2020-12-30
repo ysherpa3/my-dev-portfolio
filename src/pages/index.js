@@ -1,4 +1,3 @@
-import { Container, Divider } from "@material-ui/core";
 import React from "react";
 import AboutSection from "../components/about/about-section";
 import Layout from "../components/common/layout";
@@ -16,15 +15,9 @@ import ProjectsSection from "../components/projects/projects-section";
 const Home = () => {
   return (
     <Layout>
-      <div style={{ paddingTop: "8rem" }} />
+      <div style={{ marginTop: "5rem" }} />
       <AboutSection />
-      <Container maxWidth="lg">
-        <Divider variant="middle" />
-      </Container>
       <ProjectsSection />
-      <Container maxWidth="lg">
-        <Divider variant="middle" />
-      </Container>
       <ContactSection />
     </Layout>
   );
