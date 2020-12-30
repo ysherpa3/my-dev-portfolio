@@ -87,7 +87,10 @@ const ContactForm = () => {
             setSubmitting(false);
             resetForm();
             setProgress(100);
-            navigate("/thanks");
+            handleServerResponse(
+              true,
+              "Thank you for contacting me. I will be in touch with you soon."
+            );
           })
           .catch((error) => {
             setSubmitting(false);
